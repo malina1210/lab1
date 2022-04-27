@@ -11,7 +11,8 @@ public final class Main {
      //
     public static void task61 (String[] args) {
         System.out.print("task61");
-        Scanner in = new Scanner(System.in);
+        Scanner in;
+        in = new Scanner(System.in);
         System.out.print("Input a number: ");
         String num = in.next();//nextInt(); //получаем число от пользователя
         if (isInteger(num)) {
@@ -52,4 +53,13 @@ public final class Main {
         return result;
     }
 
+    public static double findSum (int a) {
+        double result = 0;
+
+        for (int i = 2; i < a; i++) {
+            result -= 1 - (1 / Math.pow(i, 2));
+        }
+        System.out.println("The answer:" + result);
+        return result;
+    }
 }
